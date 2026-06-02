@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Website Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Website Analyzer</h1>
+
+        <p class="subtitle">
+            AI-powered website intelligence platform for analyzing competitors,
+            business strategies, and market positioning.
+        </p>
+
+        <div class="search-box">
+            <input type="text" id="websiteInput" placeholder="Enter website URL">
+
+            <button onclick="analyzeWebsite()">
+                Analyze
+            </button>
+        </div>
+
+        <div id="loading" class="loading">
+            Processing Website...
+        </div>
+
+        <div id="result" class="result">
+
+            <div class="card">
+                <h2>Website Purpose</h2>
+                <p id="purpose"></p>
+            </div>
+
+            <div class="card">
+                <h2>Main Competitors</h2>
+                <p id="competitors"></p>
+            </div>
+
+            <div class="card">
+                <h2>Business Strategy</h2>
+                <p id="strategy"></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
